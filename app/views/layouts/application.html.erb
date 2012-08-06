@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <title>Amusing Css by Webmus.es</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="shortcut icon" href="http://webmuses.s3.amazonaws.com/favicon2.ico" type="image/x-icon">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="topstrip"></div>
+  <header>
+    <div class="container">
+       <div class="menu left">
+         <a href="/">home</a>
+         <a class="lcenter" href="/lessons">Lekcje</a>
+       </div>
+       <a href="/" id="brand">
+         <img src="/assets/logo_small.png" alt="logo"/>
+       </a>
+       <div class="menu right">
+         <a class="rcenter" href="/muses">o nas</a>
+         <a href="/materialy">materiały</a>
+       </div>
+    </div>
+  </header>
+  <div class="container">
+    <%= yield %>
+  </div> <!-- container -->
+  <footer class="clear">
+    <div class="container">
+      <a href="/"><img src="/assets/bottom.png" id="bottom" alt="bottom"/></a>
+    </div>
+    <div id="footer_copy">
+      <div class="container">
+        2012, WebMuses.
+        <a href="mailto:webmuses@gmail.com">Skontaktuj się z nami</a>
+        lub obserwuj nas na <a href="http://twitter.com/webmuses">Twitterze</a> i
+        <a href="http://www.facebook.com/webmuses">Facebooku</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
