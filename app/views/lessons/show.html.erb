@@ -1,25 +1,28 @@
-<p id="notice"><%= notice %></p>
+<% content_for :header do %>
+  <h1><%= @lesson.title %></h1>
+<% end %>
+<br/>
+<div id="draft-text">
+  <h1> Is:</h1>
+  <%= raw @answer.body %>
+  <%= raw @lesson.body %>
+  <div class="clear"></div>
+  <%= form_for @answer do |f| %>
+   <%= f.hidden_field :lesson_id, :value => @lesson.id %>
+   <%= f.hidden_field :student_id, :value => current_student.id %>
+   <%= f.text_area :body %>
+   <%= f.submit "Save" %>
+  <% end %>
+</div>
+<div id="goal-text">
+  <h1> Should be: </h1>
+  <%= raw @lesson.goal %>
+  <%= raw @lesson.body %>
+  <div class="clear"></div>
+  <h1> HTML for this example: </h1>
+  <textarea style="width:450px; height: 200px">
+    <%= @lesson.body %>
+  </textarea>
+</div>
 
-<p>
-  <b>Title:</b>
-  <%= @lesson.title %>
-</p>
 
-<p>
-  <b>Answer:</b>
-  <%= @lesson.answer %>
-</p>
-
-<p>
-  <b>Clue:</b>
-  <%= @lesson.clue %>
-</p>
-
-<p>
-  <b>Draft:</b>
-  <%= @lesson.draft %>
-</p>
-
-
-<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
-<%= link_to 'Back', lessons_path %>

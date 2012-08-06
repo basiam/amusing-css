@@ -1,29 +1,9 @@
-<h1>Listing lessons</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Answer</th>
-    <th>Clue</th>
-    <th>Draft</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @lessons.each do |lesson| %>
-  <tr>
-    <td><%= lesson.title %></td>
-    <td><%= lesson.answer %></td>
-    <td><%= lesson.clue %></td>
-    <td><%= lesson.draft %></td>
-    <td><%= link_to 'Show', lesson %></td>
-    <td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
-    <td><%= link_to 'Destroy', lesson, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<% content_for :header do %>
+  <h1>Lekcje</h1>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Lesson', new_lesson_path %>
+<br/>
+<ul>
+<% @lessons.each do |lesson| %>
+    <li><%= link_to lesson.title, lesson %></li>
+<% end %>
+</ul>

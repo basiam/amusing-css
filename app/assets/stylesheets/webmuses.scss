@@ -6,12 +6,12 @@ html, body {
 
 body {
   font-family: "Lato", Helvetica Neue, sans-serif;
+  position: relative;
 }
 
 header,nav,article,footer,section,aside,figure,figcaption{
   display:block
 }
-
 
 h2 {
   font-size: 1.8em;
@@ -24,8 +24,12 @@ h2 {
 }
 
 header {
-  width: 100%;
+  width: 200px;
+  float: left;
   padding: 10px 0 0px 0;
+  position: absolute;
+  top: 10px;
+  left: 0px;
 }
 
 header a {
@@ -34,12 +38,14 @@ header a {
 }
 
 header a:hover {
-  color: #1FCFC1;
+  color: #fff;
 }
 
+a:hover {
+  color: #1FCFC1;
+}
 #title {
   background: url('../assets/paseczki.png') repeat 0px 0px;
-  margin-top: 10px;
   border-top: 1px solid #dbdbdb;
   border-bottom: 1px solid #dbdbdb;
 }
@@ -65,15 +71,14 @@ header a:hover {
   font-size: 0.9em;
   letter-spacing: 0.1em;
   display: inline-block;
-  width: 370px;
   text-transform: uppercase;
-  padding-top: 5px;
-  padding-bottom: 25px;
-  border-bottom: 1px solid black;
 }
 
 .menu a {
-  padding-left: 20px;
+  display: block;
+  padding: 20px;
+  border: 1px solid #fff;
+  background-color: #1FCFC1;
 }
 
 .left {
@@ -100,24 +105,8 @@ a.rcenter {
 }
 
 .menu a.active{
-  background: url('../assets/dot.png') no-repeat 0px 50%;
+  background: #1FCFC1 url('../assets/dot.png') no-repeat 0px 50%;
 
-}
-
-#brand {
-  display: inline-block;
-  width: 140px;
-  height: 35px;
-  text-align: center;
-  position: relative;
-  margin-left: 10px;
-}
-
-a {
-  color: #1cbcaf;
-}
-a:hover {
-  color: #1FCFC1;
 }
 
 #post-top {
@@ -143,8 +132,8 @@ a.date {
 }
 
 .container {
-  width: 940px;
-  margin: auto;
+  width: 980px;
+  margin: 0 auto;
 }
 
 #content-wrapper {
@@ -537,41 +526,6 @@ div.tabbed {
  line-height: 1.4em;
 }
 
-#muses  {
-  margin-top: 50px;
-  margin-bottom: 40px;
-  .muse {
-    float: left;
-    width: 290px;
-    margin-right: 54px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border-right: 1px dashed #c8c7c7;
-    div {
-      width: 250px;
-    }
-    img {
-     width: 240px;
-     border: 3px solid #1FCFC1;
-    }
-    h3 {
-     font-weight: bold;
-     font-size: 24px;
-     margin: 20px 0px;
-    }
-    p {
-     text-align: justify;
-     margin: 0px;
-    }
-  }
-}
-
-#muses .muse.last {
-  margin-right: 0px;
-  border-right: none;
-  width: 250px;
-}
-
 aside.materials {
   margin-top: -69px;
   font-size: 1em;
@@ -615,20 +569,44 @@ aside h5 {
   padding-top: 100px;
   padding-left: 100px;
 }
-.link-box input{
+.link-box input {
   margin-bottom: 20px;
 }
-.link-box input[type="submit"]{
+.link-box input[type="submit"] {
   background-color: #1FCFC1;
   border: 0px;
   padding: 10px 30px;
   cursor: pointer;
   color: #fff;
 }
-.link-box input[type="submit"]:hover{
+.link-box input[type="submit"]:hover {
   color: #000;
 }
 .link-box a{
   display: block;
 }
 
+
+#goal-text, #draft-text {
+  width: 460px;
+  float: left;
+  textarea {
+    margin-top: 20px;
+  }
+}
+
+#draft-text {
+  border-right: 5px solid #1FCFC1;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+#goal-text {
+  padding-left: 10px;
+}
+
+textarea{
+  width:100%;
+  height: 200px;
+  border: 1px solid #1FCFC1;
+  margin-top: 10px;
+}

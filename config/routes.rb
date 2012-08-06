@@ -1,5 +1,7 @@
 AmusingCss::Application.routes.draw do
 
+  resources :answers, only: [:create, :update]
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config

@@ -9,4 +9,6 @@ class Student < ActiveRecord::Base
   attr_accessible :nick
 
   scope :recent, order("created_at DESC")
+
+  has_many :answers
 end
