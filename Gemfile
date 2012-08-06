@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.7'
 
-gem 'sqlite3'
 gem 'activeadmin'
 gem 'devise'
 
