@@ -1,0 +1,606 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: "Lato", Helvetica Neue, sans-serif;
+}
+
+header,nav,article,footer,section,aside,figure,figcaption{
+  display:block
+}
+
+
+h2 {
+  font-size: 1.8em;
+}
+
+#topstrip {
+  width: 100%;
+  height: 20px;
+  background: black;
+}
+
+header {
+  width: 100%;
+  padding: 10px 0 0px 0;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+header a:hover {
+  color: #1FCFC1;
+}
+
+#title {
+  background: url('../assets/paseczki.png') repeat 0px 0px;
+  margin-top: 10px;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+#title h1{
+  font-size: 5.5em;
+  font-weight: 900;
+  color: #313030;
+  float: left;
+  margin: 0px;
+  height: 150px;
+  line-height: 150px;
+  overflow: hidden;
+  width: 90%;
+}
+
+#title img{
+  float: left;
+  margin-top: 15px;
+}
+
+.menu {
+  font-size: 0.9em;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  width: 370px;
+  text-transform: uppercase;
+  padding-top: 5px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid black;
+}
+
+.menu a {
+  padding-left: 20px;
+}
+
+.left {
+  float: left;
+  padding-left: 20px;
+}
+
+a.lcenter{
+  margin-left: 120px;
+}
+
+.right {
+  float: right;
+  padding-right: 20px;
+}
+
+.right a {
+  float: right;
+  padding-right:20px;
+}
+
+a.rcenter {
+  margin-left: 120px;
+}
+
+.menu a.active{
+  background: url('../assets/dot.png') no-repeat 0px 50%;
+
+}
+
+#brand {
+  display: inline-block;
+  width: 140px;
+  height: 35px;
+  text-align: center;
+  position: relative;
+  margin-left: 10px;
+}
+
+a {
+  color: #1cbcaf;
+}
+a:hover {
+  color: #1FCFC1;
+}
+
+#post-top {
+  margin-bottom: 28px;
+  position: relative;
+}
+
+a.title {
+  color: black;
+  text-decoration: none;
+  font-size: 1.8em;
+  font-weight: 900;
+  line-height: 1.3em;
+}
+
+a.date {
+  font-size: 1.2em;
+  text-decoration: none;
+  float: right;
+  position: absolute;
+  top: 8px;
+  right: 0px;
+}
+
+.container {
+  width: 940px;
+  margin: auto;
+}
+
+#content-wrapper {
+  margin-top: 40px;
+  min-height:100%;
+  _height:100%; /* for IE6 as it doesnt understand min-height */
+}
+
+#posts {
+  width: 600px;
+  float: left;
+  margin-top: 8px;
+}
+
+#post {
+  float: left;
+  padding: 0 12px 30px 8px;
+  width: 580px;
+  font-size: 0.95em;
+  line-height: 1.7em;
+}
+
+#post + #post {
+  border-top: 1px dashed #dbdbdb;
+  padding-top: 30px;
+}
+
+p:first-of-type {
+  margin-top: 0;
+}
+
+p a.title {
+  margin-bottom: 15px;
+}
+
+.clear {
+  clear: both;
+}
+
+#navigation {
+  width: 100%;
+  float: right;
+  font-size: 0.9em;
+  margin-bottom: 30px;
+}
+
+#nav-left {
+    width: 50%;
+    float: left;
+}
+
+#nav-right {
+  width: 50%;
+  float: right;
+  text-align: right;
+}
+
+aside {
+  float: right;
+  margin-top: 30px;
+  width: 275px;
+  margin-left: 30px;
+  padding-right: 10px;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+}
+
+#upcoming_events {
+  padding-bottom: 5px;
+}
+
+.box {
+  border: 1px solid #1cbcaf;
+  margin: 30px 0 10px 0;
+}
+
+.box .inside, .social-box .inside {
+  padding: 0 10px;
+}
+
+.box .inside .event {
+  padding: 10px 0;
+  font-size: 0.9em;
+  line-height: 1.4em;
+}
+
+.box .inside .event h4 {
+  margin: 0;
+}
+
+.box .inside .event h4 a {
+  color: #000;
+  text-decoration: none;
+}
+
+.disqscount {
+  font-size: 0.8em;
+  padding-top: 8px;
+  clear: both;
+}
+
+footer {
+  width: 100%;
+  color: white;
+  font-size: 0.85em;
+  text-align: center;
+}
+
+#footer_copy {
+  background: black;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  letter-spacing: 0.03em;
+}
+
+#footer_copy a {
+  color: white;
+  text-decoration: underline;
+}
+#footer_copy a:hover {
+  color: #1FCFC1
+}
+
+h3.strip {
+  background: #1cbcaf;
+  padding: 8px 10px;
+  margin: 0;
+  color: white;
+  letter-spacing: 0.04em;
+  font-size: 1em;
+}
+
+h3.twitter.strip {
+  background: #1cbcaf url('../assets/tw.png') no-repeat 260px 8px;
+}
+
+h3.facebook.strip {
+  margin-bottom: 0px;
+  background: #1cbcaf url('../assets/f.png') no-repeat 260px 8px;
+}
+
+#twitter a {
+  text-decoration: none;
+}
+
+h3.strip a {
+  color: white;
+  text-decoration: none;
+}
+
+h3.strip a:hover {
+  color: #444;
+}
+
+#tweets a {
+    color: black;
+}
+
+#tweets {
+  margin-bottom: 30px;
+}
+
+.tweet {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #1cbcaf;
+}
+
+.tweet-content:hover {
+  color: #1FCFC1;
+}
+
+.tweet-date {
+  padding-top: 10px;
+  font-weight: 700;
+}
+.icons {
+  line-height: 45px;
+  clear:both;
+}
+
+#twitter_icon, #facebook_icon {
+  margin-right: 8px;
+  height: 46px;
+  width: 46px;
+  display: block;
+  float: left;
+}
+
+#twitter_icon {
+  background: url('../assets/twitter2.png') 0px 0px no-repeat;
+}
+
+#facebook_icon {
+  background: url('../assets/fb2.png') 0px 0px no-repeat;
+}
+
+#twitter_icon:hover{
+  background-position: 0px -46px;
+}
+
+#facebook_icon:hover{
+  background-position: 0px -46px;
+}
+
+#mail_link {
+  color: black;
+  text-decoration: underline;
+}
+
+#mail_link:hover {
+  color: #1CBCAF;
+}
+
+.clear {
+  clear:both;
+}
+
+#bottom {
+  margin-bottom: 20px;
+}
+
+div.tab-box {
+  width: 290px;
+  float: left;
+  margin-top: 50px;
+  margin-right: 35px;
+  margin-bottom: 80px;
+}
+
+div.tab-box.last {
+  margin-right: 0px;
+}
+
+div.tab-box ul {
+  border: 1px solid #1cbcaf;
+  list-style: none;
+  margin: 0px;
+  padding: 10px;
+  clear: both;
+}
+
+div.tab-box li {
+  margin: 10px;
+  padding: 20px 10px;
+  border-bottom: 1px dashed #ccc;
+}
+
+div.tab-box li:last-child {
+  border: 0px;
+}
+
+div.tab-box li a{
+  text-decoration: none;
+  color: #000;
+}
+div.tab-box li a:hover {
+  color: #1FCFC1
+}
+
+h3.header{
+  font-size: 1.1em;
+  background-color: #1cbcaf;
+  color: #ffffff;
+  margin: 0px;
+  padding: 10px 30px;
+}
+
+.tabs_box{
+   position: relative;
+   margin-top: 60px;
+   height: 48px;
+}
+
+ul#tabs {
+  padding: 0px;
+  margin: 0px;
+  clear: both;
+  position: absolute;
+  bottom: -1px;
+
+}
+
+ul#tabs li {
+  list-style: none;
+  float: left;
+  border: 1px solid #1cbcaf;
+  background-color: #1cbcaf;
+  color: #ffffff;
+  border-bottom: 0px;
+  padding: 10px 40px;
+  margin: 0px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.tabs_holder {
+  margin-bottom: 50px;
+  width: 641px;
+  float: left;
+}
+
+ul#tabs li a {
+  color: #ffffff;
+}
+
+ul#tabs li.current,  ul#tabs li.current a {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+div.tabbed {
+  border: 1px solid #1cbcaf;
+  padding: 30px 20px 20px 20px;
+  clear: both;
+  min-height: 390px;
+  line-height: 1.4em;
+}
+
+#full #posts, #full #post {
+  width: 940px;
+  padding: 0px;
+}
+
+.social-box{
+ float: left;
+ width: 300px;
+ margin-right: 20px;
+ margin-bottom: 50px;
+}
+
+.social-box.last{
+ margin-right: 0px;
+}
+
+.twtr-hd {
+  display: none;
+}
+.twtr-bd {
+  border: 0px;
+  padding: 0px;
+}
+
+.twtr-widget .twtr-timeline, .twtr-widget .twtr-doc {
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+}
+
+.twtr-widget .twtr-tweet-wrap {
+  padding: 20px 10px !important;
+}
+
+.twtr-widget .twtr-tweets {
+  height: 219px;
+}
+
+#partne img {
+   float: left;
+}
+
+#partne p {
+   float: right;
+   padding-top: 3px;
+   width: 380px;
+}
+
+#partne div {
+   clear: both;
+   min-height: 100px;
+   padding: 25px 0;
+}
+
+#partne, #us{
+  border-bottom: 1px dashed #ccc;
+}
+
+#us {
+  padding-bottom: 20px;
+}
+
+#partne {
+  margin-bottom: 10px;
+}
+
+.social-box .inside {
+ border: 1px solid  #1FCFC1;
+ padding: 20px 10px;
+ font-size: 0.9em;
+ line-height: 1.4em;
+}
+
+#muses  {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  .muse {
+    float: left;
+    width: 290px;
+    margin-right: 54px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-right: 1px dashed #c8c7c7;
+    div {
+      width: 250px;
+    }
+    img {
+     width: 240px;
+     border: 3px solid #1FCFC1;
+    }
+    h3 {
+     font-weight: bold;
+     font-size: 24px;
+     margin: 20px 0px;
+    }
+    p {
+     text-align: justify;
+     margin: 0px;
+    }
+  }
+}
+
+#muses .muse.last {
+  margin-right: 0px;
+  border-right: none;
+  width: 250px;
+}
+
+aside.materials {
+  margin-top: -69px;
+  font-size: 1em;
+  width: 280px;
+  margin-left: 10px;
+  padding-right: 0;
+}
+
+aside.materials .box {
+  border: none;
+}
+
+aside.materials h3.strip {
+  padding: 11px 0 10px 15px;
+  font-weight: lighter;
+  margin-bottom: 5px;
+}
+
+aside h4 {
+  font-size: 1.4em;
+}
+
+aside h5 {
+  font-size: 1em;
+  margin: 5px 0 10px 0;
+}
+
+.dotted {
+  width: 100%;
+  border-top: 1px dashed #dbdbdb;
+  clear: both;
+}
