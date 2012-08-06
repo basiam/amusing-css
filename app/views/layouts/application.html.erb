@@ -27,7 +27,16 @@
     </div>
   </header>
   <div class="container">
-    <%= yield %>
+    <% if devise_controller?  || controller.action_name == "home" %>
+      <div class="link-box">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= yield %>
+      </div>
+      <div id="muse">
+         <%= image_tag("/assets/muse.png", class: "big-muse") %>
+      </div>
+    <% end %>
   </div> <!-- container -->
   <footer class="clear">
     <div class="container">

@@ -604,3 +604,31 @@ aside h5 {
   border-top: 1px dashed #dbdbdb;
   clear: both;
 }
+
+.big-muse {
+  float: right;
+  margin-top: 20px;
+}
+.link-box {
+  float: left;
+  width: 450px;
+  padding-top: 100px;
+  padding-left: 100px;
+}
+.link-box input{
+  margin-bottom: 20px;
+}
+.link-box input[type="submit"]{
+  background-color: #1FCFC1;
+  border: 0px;
+  padding: 10px 30px;
+  cursor: pointer;
+  color: #fff;
+}
+.link-box input[type="submit"]:hover{
+  color: #000;
+}
+.link-box a{
+  display: block;
+}
+

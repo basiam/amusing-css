@@ -147,6 +147,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   coffee-rails (~> 3.2.1)
+  devise
   jquery-rails
   rails (= 3.2.7)
   sass-rails (~> 3.2.3)
