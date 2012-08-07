@@ -15,6 +15,9 @@ header,nav,article,footer,section,aside,figure,figcaption{
 
 h2 {
   font-size: 1.8em;
+  margin-bottom: 20px;
+  margin-top: 3px;
+  border-bottom: 1px solid  #1FCFC1;
 }
 
 #topstrip {
@@ -587,7 +590,7 @@ aside h5 {
 }
 
 
-#goal-text, #draft-text {
+#goal, #draft {
   width: 460px;
   float: left;
   textarea {
@@ -595,12 +598,12 @@ aside h5 {
   }
 }
 
-#draft-text {
+#draft {
   border-right: 5px solid #1FCFC1;
   padding-right: 10px;
   margin-right: 10px;
 }
-#goal-text {
+#goal {
   padding-left: 10px;
 }
 
@@ -610,3 +613,19 @@ textarea{
   border: 1px solid #1FCFC1;
   margin-top: 10px;
 }
+.CodeMirror{
+  margin-top: 30px;
+}
+
+.CodeRay {
+  overflow: hidden;
+  background-color: #f8f8f8;
+  border: 1px solid silver;
+  padding: 3px;
+  font-family: 'Courier New', 'Terminal', monospace;
+  color: #100;
+}
+.CodeRay pre {
+   margin: 0px;
+}
+

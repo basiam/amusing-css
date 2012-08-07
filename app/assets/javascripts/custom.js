@@ -1,4 +1,17 @@
 $(document).ready(function() {
+  var myTextArea = document.getElementById("answer_body");
+  var myCodeMirror = CodeMirror(function(elt) {
+      myTextArea.parentNode.replaceChild(elt, myTextArea);
+  }, {
+    value: myTextArea.value,
+    theme: "lesser-dark",
+    mode:  "css",
+    onChange: function(cm) {
+      var text = cm.getValue().replace(/\#/g, "div#draft #").replace(/\./g, "div#draft .");
+      console.log(text);
+      $("#draft-style").html(text);
+     }
+  });
   $('.menu a').each(function() {
    if (jQuery(this).attr('href')  ===  window.location.pathname) {
      jQuery(this).addClass('active');

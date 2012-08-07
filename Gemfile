@@ -4,6 +4,9 @@ gem 'rails', '3.2.7'
 
 gem 'activeadmin'
 gem 'devise'
+gem 'coderay'
+
+gem 'taps'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

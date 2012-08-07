@@ -2,27 +2,40 @@
   <h1><%= @lesson.title %></h1>
 <% end %>
 <br/>
-<div id="draft-text">
-  <h1> Is:</h1>
-  <%= raw @answer.body %>
+<div id="draft">
+  <h2> Wersja robocza:</h2>
+  <style type="text/css" id="draft-style">
+    <%= raw draft_css(@answer.body) %>
+  </style>
   <%= raw @lesson.body %>
   <div class="clear"></div>
+</div>
+<div id="goal">
+  <h2> Cel: </h2>
+  <style type="text/css" id="goal-style">
+    <%= raw goal_css(@lesson.goal) %>
+  </style>
+  <%= raw @lesson.body %>
+</div>
+
+<div class="clear"></div>
   <%= form_for @answer do |f| %>
    <%= f.hidden_field :lesson_id, :value => @lesson.id %>
    <%= f.hidden_field :student_id, :value => current_student.id %>
-   <%= f.text_area :body %>
-   <%= f.submit "Save" %>
+   <%= f.text_area :body, :name => "code", :class => "css" %>
+   <%= f.submit "Zapisz" %>
   <% end %>
+<div class="clear"></div>
+<br/>
+<h2> HTML: </h2>
+<div class="html-view">
+  <%= raw CodeRay.scan(@lesson.body, "html").div %>
 </div>
-<div id="goal-text">
-  <h1> Should be: </h1>
-  <%= raw @lesson.goal %>
-  <%= raw @lesson.body %>
-  <div class="clear"></div>
-  <h1> HTML for this example: </h1>
-  <textarea style="width:450px; height: 200px">
-    <%= @lesson.body %>
-  </textarea>
+<div id="solution" style="display: none">
+  <h2> CSS: </h2>
+  <div class="html-view">
+    <%= raw CodeRay.scan(@lesson.goal, "css").div %>
+  </div>
 </div>
 
 

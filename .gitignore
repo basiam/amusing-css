@@ -16,3 +16,5 @@
 .rvmrc
 *.swp
 *.swo
+db/data.yml
+.DS_Store
