@@ -8,6 +8,6 @@ module ApplicationHelper
 
   def cssed_text(text, string)
     text = text.gsub("#", "##{string} #")
-    return text.gsub(/(?!png)(\.)(?!png)/, "##{string} .")
+    return text.gsub(/\.(?![^{}]*})/, "##{string} .")
   end
 end

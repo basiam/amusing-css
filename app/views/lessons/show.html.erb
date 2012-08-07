@@ -1,6 +1,18 @@
 <% content_for :header do %>
   <h1><%= @lesson.title %></h1>
 <% end %>
+<div id="links">
+  <div class="menu">
+    <a href="/" class="showcode">Pokaż <br/>Rozwiązanie</a>
+    <% if @answer.new_record? %>
+      <a href="<%= lesson_path(@lesson, :try => "next") %>" class="copycode">Restart</a>
+    <% else %>
+      <%= link_to "Restart", answer_path(@answer, :restart => true), :method => "put" %>
+    <% end %>
+    <a href="<%= lesson_path(@lesson.next) %>">Kolejna<br/> Lekcja</a>
+    <div class="clear"></div>
+  </div>
+</div>
 <br/>
 <div id="draft">
   <h2> Wersja robocza:</h2>

@@ -35,12 +35,12 @@ header {
   left: 0px;
 }
 
-header a {
+header a, .menu a {
   text-decoration: none;
   color: black;
 }
 
-header a:hover {
+header a:hover, .menu a:hover {
   color: #fff;
 }
 
@@ -79,9 +79,12 @@ a:hover {
 
 .menu a {
   display: block;
-  padding: 20px;
+  padding: 20px 10px;
   border: 1px solid #fff;
   background-color: #1FCFC1;
+}
+.main.menu a {
+  padding: 20px;
 }
 
 .left {
@@ -575,14 +578,15 @@ aside h5 {
 .link-box input {
   margin-bottom: 20px;
 }
-.link-box input[type="submit"] {
+input[type="submit"] {
   background-color: #1FCFC1;
   border: 0px;
   padding: 10px 30px;
   cursor: pointer;
   color: #fff;
+  font-size: 20px;
 }
-.link-box input[type="submit"]:hover {
+input[type="submit"]:hover {
   color: #000;
 }
 .link-box a{
@@ -629,3 +633,9 @@ textarea{
    margin: 0px;
 }
 
+
+#links {
+  position: fixed;
+  top: 20px;
+  right: 0px;
+}
