@@ -1,10 +1,13 @@
 module ApplicationHelper
   def draft_css(text)
-    text = text.gsub("#", "div#draft #")
-    return text.gsub(".", "div#draft .")
+    cssed_text(text, "draft")
   end
   def goal_css(text)
-    text = text.gsub("#", "div#goal #")
-    return text.gsub(".", "div#goal .")
+    cssed_text(text, "goal")
+  end
+
+  def cssed_text(text, string)
+    text = text.gsub("#", "##{string} #")
+    return text.gsub(/(?!png)(\.)(?!png)/, "##{string} .")
   end
 end

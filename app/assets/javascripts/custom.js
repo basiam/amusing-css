@@ -7,7 +7,7 @@ $(document).ready(function() {
     theme: "lesser-dark",
     mode:  "css",
     onChange: function(cm) {
-      var text = cm.getValue().replace(/\#/g, "div#draft #").replace(/\./g, "div#draft .");
+      var text = cm.getValue().replace(/\#/g, "#draft #").replace(/(?!png)(\.)(?!png)/, "#draft .");
       console.log(text);
       $("#draft-style").html(text);
      }
