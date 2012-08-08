@@ -5,6 +5,7 @@ gem 'rails', '3.2.7'
 gem 'activeadmin'
 gem 'devise'
 gem 'coderay'
+gem 'thin'
 
 gem 'taps'
 
