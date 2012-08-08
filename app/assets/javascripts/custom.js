@@ -27,7 +27,7 @@ $(document).ready(function() {
   document.createElement("nav");
 
 
-   $('.showcode span').bind("click", function(e){
+   $('.showcode').bind("click", function(e){
     e.preventDefault();
     $("#solution").toggle();
     $('.showcode').html("pokaż <br/> rozwiązanie");
@@ -36,7 +36,7 @@ $(document).ready(function() {
        $.scrollTo('#solution', 800 )
      }
    })
-   $('.colory').bind("click", function(e){
+   $('.colory span').bind("click", function(e){
     e.preventDefault();
     $(".colory ul").toggle();
    });
