@@ -7,7 +7,7 @@ $(document).ready(function() {
       onChange: function(cm) {
         $("#answer_body").val(cm.getValue())
         textss = cm.getValue()
-        var text = cm.getValue().replace(/([.#a-z0-9_\- ])*(\{|,)/ig, function(s, group){
+        var text = cm.getValue().replace(/([.:#a-z0-9_\- ])*(\{|,)/ig, function(s, group){
           return " #draft " + s;
         })
         $("#draft-style").html(text);
