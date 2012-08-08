@@ -60,5 +60,8 @@
     <%= raw CodeRay.scan(@lesson.goal, "css").div %>
   </div>
 </div>
-
-
+<% if @lesson.clue.present? %>
+  <div class="full">
+    <%= simple_format @lesson.clue %>
+  </div>
+<% end %>
