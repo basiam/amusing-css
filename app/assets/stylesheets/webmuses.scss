@@ -410,7 +410,7 @@ h3.header{
 
 .tabs_box{
    position: relative;
-   margin-top: 60px;
+   margin-top: 20px;
    height: 48px;
 }
 
@@ -438,7 +438,7 @@ ul#tabs li {
 
 .tabs_holder {
   margin-bottom: 50px;
-  width: 641px;
+  width: 100%;
   float: left;
 }
 
@@ -459,9 +459,8 @@ div.tabbed {
   line-height: 1.4em;
 }
 
-#full #posts, #full #post {
-  width: 940px;
-  padding: 0px;
+div.tabbed li{
+  margin-top: 20px;
 }
 
 .social-box{

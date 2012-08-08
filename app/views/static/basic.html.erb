@@ -1,0 +1,43 @@
+<% content_for :header do %>
+  <h1> Podstawy</h1>
+<% end %>
+ <h2>Strona internetowa </h2>
+ <div class="tabs_box">
+   <ul class="clear" id="tabs">
+     <li class="current"><a rel="#rails">Struktura</a></li>
+     <li class=""><a rel="#past">Informacje</a></li>
+     <li class=""><a rel="#future">Webmuses</a></li>
+   </ul>
+ </div>
+ <div class="tabs_holder">
+   <div class="tabbed" id="rails">
+     <%= raw CodeRay.scan(basic_html, "html").div %>
+     <br/>
+     <%= link_to "Zobacz w Chromie", "view-source:http://webmus.es/", :target => "_blank" %>
+   </div>
+   <div class="tabbed" id="past">
+     <h2>head</h2>
+     <ul>
+       <li>Tutaj lądują meta-tagi (informacje o stronie np. jej tytuł, keywords)</li>
+       <li> Informacje o kodowaniu, deklaracja typu dokumentu </li>
+       <li>Linki do arkuszy stylów</li>
+       <li>Linki do plików z javascriptem</li>
+     </ul>
+     <h2>body</h2>
+     <ul>
+       <li>Tutaj są elementy, które widać na stronie</li>
+       <li><%= raw CodeRay.scan(html_elements, "html").div %></li>
+       <li>Jeśli umieścimy tu elementy, które powinny być w 'head' to i tak powinno działać w nowych przegłądarkach </li>
+     </ul>
+     <h2>HTML</h2>
+     <ul>
+       <li><i>(ang. HyperText Markup Language)</i> – hipertekstowy język znaczników</li>
+       <li><%= raw CodeRay.scan(html_tag, "html").div %></li>
+       <li><%= raw CodeRay.scan(pl_html_tag, "html").div %></li>
+     </ul>
+
+   </div>
+   <div class="tabbed" id="future">
+     <%= image_tag("/assets/webmuse_sc.png", width: 600) %>
+   </div>
+ </div>

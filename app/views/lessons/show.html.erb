@@ -7,9 +7,18 @@
     <% if @answer.new_record? %>
       <a href="<%= lesson_path(@lesson, :try => "next") %>" class="copycode">Restart</a>
     <% else %>
-      <%= link_to "Restart", answer_path(@answer, :restart => true), :method => "put" %>
+      <%= link_to "Restart", answer_path(@answer, :restart => true), :method => "put", :confirm => "Na pewno?" %>
     <% end %>
     <a href="<%= lesson_path(@lesson.next) %>">Kolejna<br/> Lekcja</a>
+    <a class="colory">
+      Kolory
+      <ul style="display:none;background: #fff;">
+        <li style="color: #CC0000">#CC0000</li>
+        <li style="color: #3300FF">#3300FF</li>
+        <li style="color: #CC0099">#CC0099</li>
+        <li style="color: #1FCFC1">#1FCFC1</li>
+      </ul>
+    </a>
     <div class="clear"></div>
   </div>
 </div>

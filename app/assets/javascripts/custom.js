@@ -32,4 +32,9 @@ $(document).ready(function() {
        $.scrollTo('#solution', 800 )
      }
    })
+   $('.colory').bind("click", function(e){
+    e.preventDefault();
+    $(".colory ul").toggle();
+   });
+   $("ul#tabs").tabs("div.tabs_holder > div", {tabs: 'li'});
 });
