@@ -12,5 +12,5 @@
  *= require webmuses
  *= require codemirror
  *= require sticky
- *= require_tree ./codemirror/.
+ *= require codemirror/lesser-dark
 */
