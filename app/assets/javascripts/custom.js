@@ -27,7 +27,7 @@ $(document).ready(function() {
   document.createElement("nav");
 
 
-   $('.showcode').bind("click", function(e){
+   $('.showcode span').bind("click", function(e){
     e.preventDefault();
     $("#solution").toggle();
     $('.showcode').html("pokaż <br/> rozwiązanie");

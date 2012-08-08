@@ -1,8 +1,10 @@
 class Lesson < ActiveRecord::Base
   attr_accessible :position, :clue, :draft, :title, :body, :goal
   scope :recent, order("created_at DESC")
+  scope :visible, where("visible = ?", true)
 
   def next
-    Lesson.order("position ASC").where("position > ?", self.position).first ||Lesson.order("position ASC").first
+    Lesson.visible.order("position ASC").where("position > ?", self.position).first ||
+    Lesson.visible.order("position ASC").first
   end
 end
