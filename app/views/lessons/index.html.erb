@@ -2,8 +2,15 @@
   <h1>Lekcje</h1>
 <% end %>
 <br/>
-<ul>
+<ul style="float: left">
 <% @lessons.each do |lesson| %>
-    <li><%= link_to lesson.title, lesson %></li>
+    <li style="padding: 10px"><%= link_to lesson.title, lesson %></li>
 <% end %>
 </ul>
+<div style="float: left">
+  <%= image_tag("/assets/muse.png", class: "big-muse") %>
+</div>
+<div style="float: left">
+  <%= image_tag("/assets/muse.png", class: "big-muse") %>
+</div>
+<div class="clear"></div>
