@@ -1,43 +1,83 @@
 <% content_for :header do %>
   <h1> Podstawy</h1>
 <% end %>
- <h2>Strona internetowa </h2>
- <div class="tabs_box">
-   <ul class="clear" id="tabs">
-     <li class="current"><a rel="#rails">Struktura</a></li>
-     <li class=""><a rel="#past">Informacje</a></li>
-     <li class=""><a rel="#future">Webmuses</a></li>
-   </ul>
- </div>
- <div class="tabs_holder">
-   <div class="tabbed" id="rails">
-     <%= raw CodeRay.scan(basic_html, "html").div %>
-     <br/>
-     <%= link_to "Zobacz w Chromie", "view-source:http://webmus.es/", :target => "_blank" %>
-   </div>
-   <div class="tabbed" id="past">
-     <h2>head</h2>
-     <ul>
-       <li>Tutaj lądują meta-tagi (informacje o stronie np. jej tytuł, keywords)</li>
-       <li> Informacje o kodowaniu, deklaracja typu dokumentu </li>
-       <li>Linki do arkuszy stylów</li>
-       <li>Linki do plików z javascriptem</li>
-     </ul>
-     <h2>body</h2>
-     <ul>
-       <li>Tutaj są elementy, które widać na stronie</li>
-       <li><%= raw CodeRay.scan(html_elements, "html").div %></li>
-       <li>Jeśli umieścimy tu elementy, które powinny być w 'head' to i tak powinno działać w nowych przegłądarkach </li>
-     </ul>
-     <h2>HTML</h2>
-     <ul>
-       <li><i>(ang. HyperText Markup Language)</i> – hipertekstowy język znaczników</li>
-       <li><%= raw CodeRay.scan(html_tag, "html").div %></li>
-       <li><%= raw CodeRay.scan(pl_html_tag, "html").div %></li>
-     </ul>
-
-   </div>
-   <div class="tabbed" id="future">
-     <%= image_tag("/assets/webmuse_sc.png", width: 600) %>
-   </div>
- </div>
+<br/>
+<br/>
+<h2>Strona internetowa </h2>
+<div class="split" style="margin-right: 20px;">
+  <%= raw CodeRay.scan(basic_html, "html").div(:class => "nice") %>
+  <br/>
+  <%= link_to "Zobacz w Chromie", "view-source:http://webmus.es/", :target => "_blank" %>
+</div>
+<div class="split">
+  <h3>head</h3>
+  <ul>
+    <li>Tutaj lądują meta-tagi (tytuł strony, keywords)</li>
+    <li> Informacje o kodowaniu, deklaracja typu dokumentu </li>
+    <li>Linki do arkuszy stylów i do plików z javascriptem</li>
+  </ul>
+  <br/>
+  <h3>body</h3>
+  <ul>
+    <li>Tutaj są elementy, które widać na stronie</li>
+    <li><%= raw CodeRay.scan("<p> <div> <span> <em>", "html").span %></li>
+    <li><%= raw CodeRay.scan("<table> <ul> <li>", "html").span %></li>
+    <li><%= raw CodeRay.scan("<img> <textarea> <label>", "html").span %></li>
+    <li><%= raw CodeRay.scan("<input> <a> <br/>", "html").span %></li>
+    <li><%= raw CodeRay.scan("<h1> <h2> <h3> <h4>", "html").span %></li>
+    <li class="last">
+      Jeśli umieścimy tu elementy, które powinny być w 'head' to i
+      tak powinno działać w nowych przegłądarkach
+    </li>
+  </u>
+</div>
+<div class="clear"></div>
+<div class="full">
+  <h3>HTML</h3>
+    <ul>
+    <li><i>(ang. HyperText Markup Language)</i> – hipertekstowy język znaczników</li>
+    <li><%= raw CodeRay.scan(html_tag, "html").span %></li>
+    <li><%= raw CodeRay.scan(pl_html_tag, "html").span %></li>
+  </ul>
+</div>
+<div class="full">
+  <h3>CSS - Kaskadowe arkusze stylów</h3>
+  <ul>
+    <li><%= raw CodeRay.scan("selektor { wlasciwosc: wartosc; }", "css").span %></li>
+    <li><%= raw CodeRay.scan("p { color: blue; }", "css").span %></li>
+  </ul>
+  <h3> Czego możemy używać? </h3>
+  <ol>
+    <li>nazwa elementu (np. <%= raw CodeRay.scan("h1 { font-size: 20px; }", "css").span %>)</li>
+    <li>klasa elementu (np. <%= raw CodeRay.scan(".menu { font-size: 20px; }", "css").span %>),
+    <br/>
+        także w połączeniu z nazwą elementu (np. <%= raw CodeRay.scan("img.menu { font-size: 20px; }", "css").span %>)
+    <br/>
+    albo więcej niż jedna klasa
+        (np. <%= raw CodeRay.scan("img.menu.main { font-size: 20px; }", "css").span %>)</li>
+    <li>id elementu (np. <%= raw CodeRay.scan("#menu {color: #fff; }", "css").span %>)</li>
+    <li>kombinacja id i klas(y) (np. <%= raw CodeRay.scan("#menu.main.extra_padding.and_something { color: #fff; }", "css").span %>)</li>
+    <li>przodkowie danego elementu (np. <%= raw CodeRay.scan("div#menu_lewe a {color: #fff; }", "css").span %>
+    <br/>zostanie zastosowane do linków zawartych w elemencie div o id „menu_lewe”)</li>
+    <li>stan linków określany przez pseudoklasy (<%= raw CodeRay.scan("a:hover { font-size: 20px; }", "css").span %>)</li>
+    <li>inne pseudoklasy typograficzne (<%= raw CodeRay.scan("p:first-line { font-weight: bold; }", "css").span %>)</li>
+  </ol>
+  <h3> Czemu kaskadowe? </h3>
+  <ol>
+    <li>
+      Domyślny arkusz przeglądarki WWW (niezależny od autora strony)
+    </li>
+    <li>
+      Domyślny arkusz użytkownika przeglądarki (jak wyżej)
+    </li>
+    <li>
+      <%= raw CodeRay.scan("<link rel='stylesheet' href='style.css' />", "html").span %>
+    </li>
+    <li>
+      <%= raw CodeRay.scan("<style type='text/css'>p {color: red; }</style>", "html").span %>
+    </li>
+    <li>
+      <%= raw CodeRay.scan("<p style='color: red'>Lorem ipsum</p>", "html").span %>
+    </li>
+  </ol>
+</div>

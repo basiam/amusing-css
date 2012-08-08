@@ -370,33 +370,28 @@ div.tab-box {
   margin-bottom: 80px;
 }
 
-div.tab-box.last {
-  margin-right: 0px;
-}
-
-div.tab-box ul {
-  border: 1px solid #1cbcaf;
+div.split ul, div.full ul {
   list-style: none;
   margin: 0px;
-  padding: 10px;
+  padding: 5px;
   clear: both;
 }
 
-div.tab-box li {
+div.split li, div.full li {
   margin: 10px;
-  padding: 20px 10px;
+  padding: 5px 0px;
   border-bottom: 1px dashed #ccc;
 }
 
-div.tab-box li:last-child {
-  border: 0px;
+div.split li.last, div.full li.last {
+  border-bottom: 0px;
 }
 
-div.tab-box li a{
+div.split li a, div.full li a {
   text-decoration: none;
   color: #000;
 }
-div.tab-box li a:hover {
+div.split li a:hover , div.full li a:hover {
   color: #1FCFC1
 }
 
@@ -638,4 +633,22 @@ textarea{
   position: fixed;
   top: 20px;
   right: 0px;
+}
+.split {
+  width: 450px;
+  padding: 10px;
+  float: left;
+  border: 1px solid #1FCFC1;
+}
+.full {
+  width: 940px;
+  border: 1px solid #1FCFC1;
+  padding: 10px;
+  margin-top: 30px;
+}
+.full h3 {
+  margin-top: 30px;
+}
+.full ol {
+  line-height: 30px;
 }

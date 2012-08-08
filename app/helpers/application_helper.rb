@@ -31,19 +31,28 @@ module ApplicationHelper
     <a href="/" id="brand">
       <img src="/assets/logo.png" alt="logo"/>
     </a>
+    <div class="menu right">
+      <a href="/">home</a>
+      <a class="lcenter" href="/wydarzenia">wydarzenia</a>
+    </div>
+  </div>
+  <div id="title">
+    <div class="container">
+       <div id="title-holder">
+          Lorem Ipsum
+       </div>
+     </div>
+   </div>
  </div>
 </body>
 </html>}
 
   end
 
-  def html_elements
-    %s{ <p> <div> <ul> <li> <span> }
-  end
-
   def html_tag
     "<tag attribute1='value1' attribute2='value2'>content</tag>"
   end
+
   def pl_html_tag
     '<nazwa-znacznika atrybut="wartosc" atrybut2="wartosc2">zawartosc</nazwa-znacznika>'
   end
