@@ -60,5 +60,6 @@ module AmusingCss
     config.assets.version = '1.0'
     config.i18n.locale = :pl
     config.i18n.default_locale = :pl
+    config.assets.precompile += %w( active_admin.css active_admin.js )
   end
 end
