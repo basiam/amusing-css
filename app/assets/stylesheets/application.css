@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require webmuses
-//= require codemirror
-//= require_tree ./codemirror/.
+ *= require codemirror
+ *= require sticky
+ *= require_tree ./codemirror/.
 */

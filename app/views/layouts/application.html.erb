@@ -11,41 +11,42 @@
 </head>
 <body>
   <div id="topstrip"></div>
-  <header>
-    <div class="menu main">
-      <a href="/">home</a>
-      <a href="/lessons">Lekcje</a>
-      <a href="http://webmus.es" target="_blank">Webmuses</a>
-      <a href="/basic">Podstawy</a>
-      <div class="clear"></div>
-    </div>
-  </header>
-    <% if devise_controller?  || controller.action_name == "home" %>
-      <div class="container">
-        <div class="link-box">
-          <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
-          <%= yield %>
-        </div>
-        <div id="muse">
-           <%= image_tag("/assets/muse.png", class: "big-muse") %>
-        </div>
-      </div>
-    <% else %>
-      <div id="title">
-         <div id="title-holder" class="container">
-            <%= yield(:header) %>
-         </div>
+  <div class="wrapper">
+    <header>
+      <div class="menu main">
+        <a href="/">home</a>
+        <a href="/lessons">Lekcje</a>
+        <a href="http://webmus.es" target="_blank">Webmuses</a>
+        <a href="/basic">Podstawy</a>
         <div class="clear"></div>
       </div>
-      <div class="container">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-          <%= yield %>
-      </div>
-    <% end %>
-
-  </div> <!-- container -->
+    </header>
+      <% if devise_controller?  || controller.action_name == "home" %>
+        <div class="container">
+          <div class="link-box">
+            <p class="notice"><%= notice %></p>
+            <p class="alert"><%= alert %></p>
+            <%= yield %>
+          </div>
+          <div id="muse">
+             <%= image_tag("/assets/muse.png", class: "big-muse") %>
+          </div>
+        </div>
+      <% else %>
+        <div id="title">
+           <div id="title-holder" class="container">
+              <%= yield(:header) %>
+           </div>
+          <div class="clear"></div>
+        </div>
+        <div class="container">
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+            <%= yield %>
+        </div>
+      <% end %>
+    <div class="push"></div>
+  </div>
   <footer class="clear">
     <div class="container">
       <a href="/"><img src="/assets/bottom.png" id="bottom" alt="bottom"/></a>
