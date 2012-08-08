@@ -6,7 +6,10 @@ $(document).ready(function() {
       mode:  "css",
       onChange: function(cm) {
         $("#answer_body").val(cm.getValue())
-        var text = cm.getValue().replace(/\#(?![^{}]*})/g, "#draft #").replace(/\.(?![^{}]*})/g, "#draft .");
+        textss = cm.getValue()
+        var text = cm.getValue().replace(/([.#a-z0-9_\- ])*(\{|,)/ig, function(s, group){
+          return " #draft " + s;
+        })
         $("#draft-style").html(text);
        }
     });
