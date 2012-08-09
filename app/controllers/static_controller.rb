@@ -5,4 +5,7 @@ class StaticController < ApplicationController
 
   def basic
   end
+
+  def examples
+  end
 end

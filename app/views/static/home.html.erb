@@ -5,7 +5,7 @@
    </h1>
 <% else %>
   <h3><%= link_to "Zaloguj się", new_session_path(:student) %></h3>
-  <h3><%= link_to "Zapisz się?", new_registration_path(:student) %></h3>
+  <h3><%= link_to "Zapisz się", new_registration_path(:student) %></h3>
   <h4><%= link_to "Hasło potrzebne?", new_password_path(:student) %></h4>
 <% end -%>
 

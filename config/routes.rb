@@ -10,5 +10,6 @@ AmusingCss::Application.routes.draw do
   resources :lessons, only: [:show, :index]
 
   match 'basic' => 'static#basic'
+  match 'examples' => 'static#examples'
   root :to => "static#home"
 end

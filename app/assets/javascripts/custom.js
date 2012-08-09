@@ -40,5 +40,7 @@ $(document).ready(function() {
     e.preventDefault();
     $(".colory ul").toggle();
    });
-   $("ul#tabs").tabs("div.tabs_holder > div", {tabs: 'li'});
+   $('.clickable').bind("click", function(e){
+    $(e.currentTarget).find(".shy").toggle();
+   });
 });

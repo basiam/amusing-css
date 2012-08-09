@@ -1,0 +1,45 @@
+<% content_for :header do %>
+  <h1> Proste przykłady </h1>
+<% end %>
+<br/>
+<br/>
+<div class="exmaples">
+  <style type="text/css">
+    h1 {color: red; }
+    h1#warning {color: green; }
+    h1.alert {color: red; }
+  </style>
+  <div class="view">
+    <%= raw CodeRay.scan("h1 {color: red; }", "css").div %>
+    <%= raw CodeRay.scan("h1#warning {color: green; }", "css").div %>
+    <%= raw CodeRay.scan("h1.alert {color: red; }", "css").div %>
+    <%= raw CodeRay.scan("<h1 id='warning' class='alert'>Header</h1>", "html").div %>
+  </div>
+  <div class="clickable">
+    Kliknij żeby zobaczyć efekt
+    <h1 id='warning' class='shy alert' style="display: none">Header</h1>
+  </div>
+  <div class="clear"></div>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <style type="text/css">
+    p {color: red; font-size: 50px; display: block; }
+    p#warning {color: green; background: red; background: blue; }
+    p.alert.more.something {color: red; text-decoration: underline }
+  </style>
+  <div class="view">
+    <%= raw CodeRay.scan("p {color: red; font-size: 50px; \n display: block; }", "css").div %>
+    <%= raw CodeRay.scan("p#warning {color: green; background: red; \n background: blue; }", "css").div %>
+    <%= raw CodeRay.scan("p.alert.more.something {color: red; \n text-decoration: underline; }", "css").div %>
+    <%= raw CodeRay.scan("<p id='warning' class='alert more something'>\n  Paragraf\n</p>", "html").div %>
+  </div>
+  <div class="clickable">
+    Kliknij żeby zobaczyć efekt
+    <p id='warning' class='shy alert more something' style="display: none">Paragraf</p>
+  </div>
+  <div class="clear"></div>
+</div>

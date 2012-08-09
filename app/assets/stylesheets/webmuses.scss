@@ -620,14 +620,26 @@ textarea{
   overflow: hidden;
   background-color: #f8f8f8;
   border: 1px solid silver;
-  padding: 3px;
   font-family: 'Courier New', 'Terminal', monospace;
   color: #100;
+}
+.html-view .CodeRay {
+  padding: 3px;
+}
+.exmaples .clickable{
+  width: 500px;
+  float: right;
+}
+.exmaples .view{
+  width: 400px;
+  float: left;
+  div {
+    padding: 10px;
+  }
 }
 .CodeRay pre {
    margin: 0px;
 }
-
 
 #links {
   position: fixed;
