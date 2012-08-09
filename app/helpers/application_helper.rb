@@ -7,7 +7,7 @@ module ApplicationHelper
   end
 
   def cssed_text(text, string)
-    return text.gsub(/[=\[\].:#a-z0-9_\- @%]*(\{|,)./) {|m|
+    return text.gsub(/[=\[\].:#a-z0-9_\- @%\(\)]*(\{|,)./) {|m|
      (m.include?("@") || m.include?("%")) ? m : "##{string} #{m}"
     }
   end
