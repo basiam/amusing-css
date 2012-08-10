@@ -11,5 +11,5 @@ AmusingCss::Application.routes.draw do
 
   match 'basic' => 'static#basic'
   match 'examples' => 'static#examples'
-  root :to => "static#home"
+  root :to => "lessons#index"
 end
