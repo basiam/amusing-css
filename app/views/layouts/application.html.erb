@@ -24,11 +24,6 @@
     </header>
       <% if devise_controller?  || controller.action_name == "home" %>
         <div class="container">
-          <div class="link-box">
-            <p class="notice"><%= notice %></p>
-            <p class="alert"><%= alert %></p>
-            <%= yield %>
-          </div>
           <div id="muse">
              <%= image_tag("/assets/muse.png", class: "big-muse") %>
           </div>

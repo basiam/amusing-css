@@ -9,7 +9,6 @@ $(document).ready(function() {
         textss = cm.getValue()
         var text = cm.getValue().replace(/([=\[\].:#a-z0-9_\- \)\(])*(\{|,)/ig, function(s, group){
           return ((s.indexOf("@") > -1) || (s.indexOf("%") > -1)) ? s : " #draft " + s
-
         })
         $("#draft-style").html(text);
        }

@@ -54,6 +54,10 @@ module ApplicationHelper
   end
 
   def pl_html_tag
-    '<nazwa-znacznika atrybut="wartosc" atrybut2="wartosc2">zawartosc</nazwa-znacznika>'
+    '<nazwa-znacznika wlasciwosc="wartosc" wlasciwosc="wartosc2">zawartosc</nazwa-znacznika>'
+  end
+
+  def simple_tag
+    '<span class="wartosc1" id="costam">zawartosc</span>'
   end
 end

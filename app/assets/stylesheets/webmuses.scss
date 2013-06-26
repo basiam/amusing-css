@@ -38,6 +38,13 @@ header {
 header a, .menu a {
   text-decoration: none;
   color: black;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
 }
 
 header a:hover, .menu a:hover {
@@ -631,6 +638,16 @@ textarea {
 .exmaples .clickable {
   width: 500px;
   float: right;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  :last-child {
+    margin-top: 20px;
+  }
 }
 .exmaples .view {
   width: 400px;
@@ -676,4 +693,14 @@ textarea {
 }
 .full ol {
   line-height: 30px;
+}
+
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.margin-top60 {
+  margin-top: 60px;
 }
