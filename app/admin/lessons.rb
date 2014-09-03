@@ -2,7 +2,7 @@ ActiveAdmin.register Lesson do
   index do
     column :title
     column :position
-    default_actions
+    actions
   end
   show do |ad|
     attributes_table do
@@ -13,6 +13,11 @@ ActiveAdmin.register Lesson do
       row :clue
       row :visible
       row :position
+    end
+  end
+  controller do
+    def permitted_params
+      params.permit!
     end
   end
 end

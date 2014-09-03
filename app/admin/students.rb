@@ -1,7 +1,7 @@
 ActiveAdmin.register Student do
   index do
     column :email
-    default_actions
+    actions
   end
   form do |f|
     f.inputs "Student Details" do
