@@ -7,7 +7,10 @@
     <% if @answer.new_record? %>
       <a href="<%= lesson_path(@lesson, :try => "next") %>" class="copycode">Restart</a>
     <% else %>
-      <%= link_to "Restart", answer_path(@answer, :restart => true), :method => "put", :confirm => "Na pewno?" %>
+       <%= form_for @answer do |f| %>
+        <%= f.hidden_field :restart, value: true %>
+        <%= f.submit "Restart", confirm: "Na pewno?" %>
+       <% end %>
     <% end %>
     <a href="<%= lesson_path(@lesson.next) %>">Kolejna<br/> Lekcja</a>
     <a class="colory">
