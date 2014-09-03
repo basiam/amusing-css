@@ -59,7 +59,7 @@ a:hover {
   color: #088;
 }
 #title {
-  background: url('../assets/paseczki.png') repeat 0px 0px;
+  background: url('paseczki.png') repeat 0px 0px;
   border-top: 1px solid #dbdbdb;
   border-bottom: 1px solid #dbdbdb;
 }
@@ -122,7 +122,7 @@ a.rcenter {
 }
 
 .menu a.active{
-  background: #1FCFC1 url('../assets/dot.png') no-repeat 0px 50%;
+  background: #1FCFC1 url('dot.png') no-repeat 0px 50%;
 
 }
 
@@ -284,12 +284,12 @@ h3.strip {
 }
 
 h3.twitter.strip {
-  background: #1cbcaf url('../assets/tw.png') no-repeat 260px 8px;
+  background: #1cbcaf url('tw.png') no-repeat 260px 8px;
 }
 
 h3.facebook.strip {
   margin-bottom: 0px;
-  background: #1cbcaf url('../assets/f.png') no-repeat 260px 8px;
+  background: #1cbcaf url('f.png') no-repeat 260px 8px;
 }
 
 #twitter a {
@@ -341,18 +341,18 @@ h3.strip a:hover {
 }
 
 #twitter_icon {
-  background: url('../assets/twitter2.png') 0px 0px no-repeat;
+  background: url('twitter2.png') 0px 0px no-repeat;
 }
 
 #facebook_icon {
-  background: url('../assets/fb2.png') 0px 0px no-repeat;
+  background: url('fb2.png') 0px 0px no-repeat;
 }
 
-#twitter_icon:hover{
+#twitter_icon:hover {
   background-position: 0px -46px;
 }
 
-#facebook_icon:hover{
+#facebook_icon:hover {
   background-position: 0px -46px;
 }
 

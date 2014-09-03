@@ -22,3 +22,5 @@ dupa.text
 *.dat
 /public/assets
 /public/uploads
+/config/database.yml
+/config/credentials.yml

@@ -28,7 +28,7 @@
             <%= yield %>
           </div>
           <div id="muse">
-             <%= image_tag("/images/muse.png", class: "big-muse") %>
+             <%= image_tag("muse.png", class: "big-muse") %>
           </div>
         </div>
       <% else %>
@@ -48,7 +48,9 @@
   </div>
   <footer class="clear">
     <div class="container">
-      <a href="/"><img src="/images/bottom.png" id="bottom" alt="bottom"/></a>
+      <a href="/">
+        <%= image_tag("bottom.png", id: "bottom") %>
+      </a>
     </div>
     <div id="footer_copy">
       <div class="container">
