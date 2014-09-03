@@ -1,6 +1,8 @@
 ActiveAdmin.register Student do
+  filter :email
   index do
     column :email
+    column :created_at
     actions
   end
   form do |f|

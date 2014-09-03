@@ -1,4 +1,5 @@
 ActiveAdmin.register AdminUser, :as => "Admin" do
+  filter :email
   index do
     column :email
     actions
