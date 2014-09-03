@@ -29,7 +29,7 @@ module ApplicationHelper
       <a class="lcenter" href="/wydarzenia">wydarzenia</a>
     </div>
     <a href="/" id="brand">
-      <img src="/assets/logo.png" alt="logo"/>
+      <img src="/images/logo.png" alt="logo"/>
     </a>
     <div class="menu right">
       <a href="/">home</a>
