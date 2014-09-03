@@ -6,7 +6,6 @@ class LessonsController < ApplicationController
 
   def show
     @lesson = Lesson.visible.find(params[:id])
-    id = current_student.id
-    @answer = Answer.find_or_initialize_by_student_id_and_lesson_id(id, @lesson.id)
+    @answer = Answer.find_or_initialize_by(student_id: current_student.id, lesson_id: @lesson.id)
   end
 end

@@ -1,21 +1,19 @@
-ruby '1.9.2'
+#Gem
+ruby '2.1.2'
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '~> 4.1.4'
 
-gem 'activeadmin'
+gem 'activeadmin', :github => 'gregbell/active_admin'
 gem 'devise'
 gem 'coderay'
-gem 'thin'
+gem 'unicorn'
 
 gem 'taps'
 
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
-end
-
+gem 'sass-rails', '~> 4.0.3'
+gem 'coffee-rails'
+gem 'uglifier'
 gem 'jquery-rails'
 
 group :development, :test do
