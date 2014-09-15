@@ -31,6 +31,12 @@ $(document).ready(function() {
     window.localStorage.setItem(lesson, answer);
   };
 
+  var removeAnswer = function(){
+    var lesson = window.location.pathname;
+    window.localStorage.removeItem(lesson);
+    window.location.reload();
+  };
+
   $('form#answer').on('submit', function(e){
     e.preventDefault();
 
@@ -40,7 +46,7 @@ $(document).ready(function() {
   $('.copycode').on('click', function(e){
     e.preventDefault();
 
-    loadAnswer();
+    removeAnswer();
   });
 
   $('.main a').each(function() {
