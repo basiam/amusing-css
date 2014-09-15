@@ -50,9 +50,10 @@ $(document).ready(function() {
   });
 
   $('.main a').each(function() {
-   if (jQuery(this).attr('href')  ===  window.location.pathname) {
-     jQuery(this).addClass('active');
-   }});
+    if (jQuery(this).attr('href')  ===  window.location.pathname) {
+      jQuery(this).addClass('active');
+    }
+  });
   document.createElement("article");
   document.createElement("aside");
   document.createElement("footer");
@@ -61,20 +62,20 @@ $(document).ready(function() {
   document.createElement("nav");
 
 
-   $('.showcode').bind("click", function(e){
+  $('.showcode').bind("click", function(e){
     e.preventDefault();
     $("#solution").toggle();
     $('.showcode').html("pokaż <br/> rozwiązanie");
     if ($("#solution").is(":visible")){
-       $('.showcode').html("Ukryj <br/> rozwiązanie");
-       $.scrollTo('#solution', 800 )
-     }
-   })
-   $('.colory span').bind("click", function(e){
+      $('.showcode').html("Ukryj <br/> rozwiązanie");
+      $.scrollTo('#solution', 800 )
+    }
+  })
+  $('.colory span').bind("click", function(e){
     e.preventDefault();
     $(".colory ul").toggle();
-   });
-   $('.clickable').bind("click", function(e){
+  });
+  $('.clickable').bind("click", function(e){
     $(e.currentTarget).find(".shy").toggle();
-   });
+  });
 });
