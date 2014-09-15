@@ -1,7 +1,7 @@
 $(document).ready(function() {
   var myTextArea = document.getElementById("answer_body");
   if (myTextArea){
-    var myCodeMirror = CodeMirror.fromTextArea(myTextArea, {
+    myCodeMirror = CodeMirror.fromTextArea(myTextArea, {
       theme: "lesser-dark",
       mode:  "css",
       onChange: function(cm) {
@@ -14,6 +14,33 @@ $(document).ready(function() {
        }
     });
   }
+
+  var loadAnswer = function(){
+    var lesson = window.location.pathname;
+    var answer = window.localStorage.getItem(lesson);
+    myCodeMirror.setValue(answer);
+  };
+
+  loadAnswer();
+
+  var saveAnswer = function(){
+    var lesson = window.location.pathname;
+    var answer = $('#answer_body').val();
+    window.localStorage.setItem(lesson, answer);
+  };
+
+  $('form#answer').on('submit', function(e){
+    e.preventDefault();
+
+    saveAnswer();
+  });
+
+  $('.copycode').on('click', function(e){
+    e.preventDefault();
+
+    loadAnswer();
+  });
+
   $('.main a').each(function() {
    if (jQuery(this).attr('href')  ===  window.location.pathname) {
      jQuery(this).addClass('active');

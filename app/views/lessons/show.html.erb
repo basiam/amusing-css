@@ -4,7 +4,7 @@
 <div id="links">
   <div class="menu">
     <a href="/" class="showcode">Pokaż <br/>Rozwiązanie</a>
-    <a class='copycode'>Restart</a>
+    <a href='#' class='copycode'>Restart</a>
     <a href="<%= lesson_path(@lesson.next) %>">Kolejna<br/> Lekcja</a>
     <a class="colory">
       <span>Kolory</span>
@@ -37,7 +37,7 @@
 </div>
 
 <div class="clear"></div>
-  <form>
+  <form id='answer'>
     <textarea id='answer_body' name="code" class="css"></textarea>
     <input type='submit' value='Zapisz'>
   </form>
