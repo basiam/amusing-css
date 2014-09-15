@@ -5,16 +5,6 @@ ActiveAdmin.register_page "Dashboard" do
   content :title => "Recent Students"  do
     columns do
       column do
-        panel "Recent Users" do
-          ul do
-            Student.recent.limit(5).map do |s|
-              li link_to(s.email, admin_student_path(s))
-            end
-          end
-        end
-      end
-
-      column do
         panel "Recent Lessons" do
            ul do
              Lesson.recent.limit(5).map do |l|

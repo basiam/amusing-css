@@ -4,14 +4,7 @@
 <div id="links">
   <div class="menu">
     <a href="/" class="showcode">Pokaż <br/>Rozwiązanie</a>
-    <% if @answer.new_record? %>
-      <a href="<%= lesson_path(@lesson, :try => "next") %>" class="copycode">Restart</a>
-    <% else %>
-       <%= form_for @answer do |f| %>
-        <%= f.hidden_field :restart, value: true %>
-        <%= f.submit "Restart", confirm: "Na pewno?" %>
-       <% end %>
-    <% end %>
+    <a href='#' class='copycode'>Restart</a>
     <a href="<%= lesson_path(@lesson.next) %>">Kolejna<br/> Lekcja</a>
     <a class="colory">
       <span>Kolory</span>
@@ -31,7 +24,6 @@
 <div id="draft">
   <h2> Wersja robocza:</h2>
   <style type="text/css" id="draft-style">
-    <%= raw draft_css(@answer.body) %>
   </style>
   <%= raw @lesson.body %>
   <div class="clear"></div>
@@ -45,12 +37,10 @@
 </div>
 
 <div class="clear"></div>
-  <%= form_for @answer do |f| %>
-   <%= f.hidden_field :lesson_id, :value => @lesson.id %>
-   <%= f.hidden_field :student_id, :value => current_student.id %>
-   <%= f.text_area :body, :name => "code", :class => "css" %>
-   <%= f.submit "Zapisz" %>
-  <% end %>
+  <form id='answer'>
+    <textarea id='answer_body' name="code" class="css"><%= raw(@lesson.draft) %></textarea>
+    <input type='submit' value='Zapisz'>
+  </form>
 <div class="clear"></div>
 <br/>
 <h2> HTML: </h2>

@@ -1,6 +1,5 @@
 class StaticController < ApplicationController
-  def home
-     redirect_to lessons_path and return if current_student
+  def about
   end
 
   def basic
