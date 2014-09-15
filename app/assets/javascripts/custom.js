@@ -18,7 +18,9 @@ $(document).ready(function() {
   var loadAnswer = function(){
     var lesson = window.location.pathname;
     var answer = window.localStorage.getItem(lesson);
-    myCodeMirror.setValue(answer);
+    if(answer){
+      myCodeMirror.setValue(answer);
+    }
   };
 
   loadAnswer();
