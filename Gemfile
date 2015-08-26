@@ -1,10 +1,10 @@
-#Gem
-ruby '2.1.2'
 source 'https://rubygems.org'
+
+ruby '2.2.3'
 
 gem 'rails', '~> 4.1.4'
 
-gem 'activeadmin', :github => 'gregbell/active_admin'
+gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
 gem 'coderay'
 gem 'unicorn'
